@@ -1,9 +1,10 @@
 language: java
 jdk:
- - oraclejdk8
-
+- oraclejdk8
 install:
- - true
-
+- true
 script:
- - gradle build -x test
+- gradle build -x test
+before_install:
+- openssl aes-256-cbc -K $encrypted_c7216059caae_key -iv $encrypted_c7216059caae_iv
+  -in travis.enc -out travis -d
