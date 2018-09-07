@@ -193,6 +193,7 @@ public class Controller {
                 contractAddress, ownerAddress, spenderAddress);
     }
 
+
     private static List<String> extractPrivateFor(HttpServletRequest request) {
         String privateFor = request.getHeader("privateFor");
         if (privateFor == null) {
