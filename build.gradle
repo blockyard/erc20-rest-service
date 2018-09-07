@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '1.5.3.RELEASE'
+    id 'org.springframework.boot' version '2.0.4.RELEASE'
 }
 
 apply plugin: 'java'
@@ -15,11 +15,11 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE',
+    compile 'org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE',
             'io.springfox:springfox-swagger2:2.7.0',
             'io.springfox:springfox-swagger-ui:2.7.0',
             'org.projectlombok:lombok:1.16.16',
             'org.web3j:quorum:0.8.0'
     testCompile 'junit:junit:4.12',
-            'org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE'
+            'org.springframework.boot:spring-boot-starter-test:2.0.4.RELEASE'
 }
