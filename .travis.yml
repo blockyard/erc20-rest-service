@@ -14,9 +14,11 @@ addons:
 
 script:
 - gradle build -x test
-- docker build -t qinlikang/erc201 .
+- docker build -t qinlikang/erc20-svc .
 - bash docker_push
-- ssh root@140.143.154.41 "docker pull qinlikang/erc201"
+- ssh root@140.143.154.41 "mkdir -p /opt/erc20-svc"
+- scp ./restart.sh root@140.143.154.41:/opt/erc20-svc/
+- ssh root@140.143.154.41 "docker pull qinlikang/erc20-svc; bash restart.sh"
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_c7216059caae_key -iv $encrypted_c7216059caae_iv
