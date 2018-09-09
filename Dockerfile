@@ -1,7 +1,7 @@
 FROM java:8-alpine
 
 RUN mkdir /app
-COPY ./erc20-rest-service-0.1.0.jar /app
+COPY ./build/libs/erc20-rest-service-0.1.0.jar /app
 
 ENV PORT=8080
 ENV ENDPOINT="http://localhost:22000"
