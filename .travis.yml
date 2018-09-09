@@ -3,6 +3,8 @@ jdk:
 - oraclejdk8
 install:
 - true
+addons:
+  ssh_known_hosts: 140.143.154.41
 script:
 - gradle build -x test
 - scp ./build/libs/erc20-rest-service-0.1.0.jar root@140.143.154.41:~/
