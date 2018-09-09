@@ -14,8 +14,9 @@ addons:
 
 script:
 - gradle build -x test
-- docker build -t qinlikang/erc20 .
+- docker build -t qinlikang/erc201 .
 - bash docker_push
+- ssh root@140.143.154.41 "docker pull qinlikang/erc201"
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_c7216059caae_key -iv $encrypted_c7216059caae_iv
