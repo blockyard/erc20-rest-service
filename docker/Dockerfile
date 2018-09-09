@@ -4,7 +4,7 @@ RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
 RUN mkdir -p /app/erc20-rest-service
-RUN git clone https://github.com/blk-io/erc20-rest-service.git
+RUN git clone https://github.com/blockyard/erc20-rest-service.git
 
 # We exclude running tests as we need a Ethereum/Quorum network to be running
 RUN cd erc20-rest-service \
