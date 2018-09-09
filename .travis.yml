@@ -14,15 +14,9 @@ addons:
 
 script:
 - gradle build -x test
-- scp ./build/libs/erc20-rest-service-0.1.0.jar root@140.143.154.41:~/
+  bash docker_push
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_c7216059caae_key -iv $encrypted_c7216059caae_iv
   -in id_travis.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-
-deploy:
-  provider: script
-  script: bash docker_push
-  on:
-     branch: master
